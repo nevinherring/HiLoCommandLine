@@ -9,7 +9,7 @@ public class HiLo {
 		
 		//play again string
 		String playAgain = "";
-		
+		int trials = 0;
 		// game loop
 		do {
 			// create a random number from 1-100
@@ -30,13 +30,14 @@ public class HiLo {
 				}else {
 					System.out.println(guess + " is correct!");
 				}
-				
+				trials += 1;
 			} // end of while loop for guessing
-			
+			System.out.println("You won!  It took you " + trials + " tries to guess correctly!");
+			trials = 0;
 			// ask for 'y' to play again
  			System.out.println("Would you like to play again (y/n)?");
 		    playAgain = scan.next();
- 
+		    
 		}  while(playAgain.equalsIgnoreCase("y"));	
 		// thank the user for playing
 		
